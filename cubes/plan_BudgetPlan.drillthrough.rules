@@ -1,0 +1,7 @@
+#['plan_chart_of_accounts':'Revenue','budget']=S:'Revenue_analysis';
+['COS','budget']=S:'COS_analysis';
+['Operating Expense','budget']=S:'Expense_analysis';
+['line input']=S:'Budget_line_entry';
+['local','input']=S:'Budget_line_entry';
+
+

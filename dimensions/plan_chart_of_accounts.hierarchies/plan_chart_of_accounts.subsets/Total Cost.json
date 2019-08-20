@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Total Cost",
+	"Expression":"{ DRILLDOWNMEMBER( {TM1SubsetBasis()}, {[plan_chart_of_accounts].[Operating Expense]} ) }"
+}

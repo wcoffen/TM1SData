@@ -1,0 +1,11 @@
+{
+	"@type":"Process",
+	"Name":"Go Forever",
+	"Code@Code.link":"Go Forever.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

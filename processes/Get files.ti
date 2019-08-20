@@ -1,0 +1,41 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+LogFileList = 'LogFileList.txt';
+
+csDimName = LogFileList;
+
+IF(DIMENSIONEXISTS(csDimName)=0);
+     DIMENSIONCREATE(csDimName);
+ELSE;
+     DimensionDeleteAllElements(csDimName);
+ENDIF;
+
+
+
+cmd = 'cmd /C dir ..\..\tm1*.log /B /S /A-D >> LogFileList.txt';
+
+ExecuteCommand( cmd, 1 );
+
+DATASOURCENAMEFORSERVER= LogFileList;
+DatasourceType = 'CHARACTERDELIMITED';
+
+sGoofCharacter = CHAR(191);
+DatasourceASCIIDelimiter = sGoofCharacter;
+DatasourceASCIIHeaderRecords = 0;
+DatasourceASCIIQuoteCharacter = '"';
+
+
+
+#endregion
+#region Metadata
+DimensionElementInsertDirect(csDimName,'',V1,'N');
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#endregion

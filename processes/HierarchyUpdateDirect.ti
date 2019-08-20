@@ -1,0 +1,10 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+HierarchyUpdateDirect('plan_chart_of_accounts','Leaves');
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

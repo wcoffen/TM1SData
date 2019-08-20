@@ -1,0 +1,28 @@
+{
+	"@type":"Process",
+	"Name":"Get Files3",
+	"Code@Code.link":"Get Files3.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"asciiDecimalSeparator":".",
+		"asciiDelimiterChar":"¿",
+		"asciiDelimiterType":"Character",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiThousandSeparator":",",
+		"dataSourceNameForClient":"model_upload\\tm1server.log",
+		"dataSourceNameForServer":"model_upload\\tm1server.log"
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"V1",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

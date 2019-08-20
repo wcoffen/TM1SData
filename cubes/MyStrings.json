@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"MyStrings",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('List01')"
+		},
+		{
+			"@id":"Dimensions('List02')"
+		},
+		{
+			"@id":"Dimensions('List03')"
+		},
+		{
+			"@id":"Dimensions('MyStrings')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"MyStrings.views/AllData.json",
+		"MyStrings.views/Data.json"
+	]
+}

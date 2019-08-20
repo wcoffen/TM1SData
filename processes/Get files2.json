@@ -1,0 +1,19 @@
+{
+	"@type":"Process",
+	"Name":"Get files2",
+	"Code@Code.link":"Get files2.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"asciiDecimalSeparator":".",
+		"asciiDelimiterChar":"¿",
+		"asciiDelimiterType":"Character",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiThousandSeparator":",",
+		"dataSourceNameForClient":"model_upload\\tm1server.log",
+		"dataSourceNameForServer":"model_upload\\tm1server.log"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

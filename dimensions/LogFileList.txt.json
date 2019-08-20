@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"LogFileList.txt",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('LogFileList.txt')/Hierarchies('LogFileList.txt')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"LogFileList.txt.hierarchies/LogFileList.txt.json"
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Test Public with UDC2",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('plan_chart_of_accounts')/Hierarchies('plan_chart_of_accounts')/Elements('Revenue')"
+		},
+		{
+			"@id":"Dimensions('plan_chart_of_accounts')/Hierarchies('plan_chart_of_accounts')/Elements('Total Cost')"
+		}
+	]
+}

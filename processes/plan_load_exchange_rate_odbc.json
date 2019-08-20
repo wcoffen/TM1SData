@@ -1,0 +1,61 @@
+{
+	"@type":"Process",
+	"Name":"plan_load_exchange_rate_odbc",
+	"Code@Code.link":"plan_load_exchange_rate_odbc.ti",
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"plan_load_data",
+		"dataSourceNameForServer":"plan_load_data",
+		"password":"dOmoa\\v8mFqW<yf@FEhCS]2WM<g8V1IomajN?<>@n9X4o>CAtBLRi\\>`XbebsQDQMIZ4>1WFYi>gjIfAc>3rqGXIq?Eu:8qjPdsXOpFC6s6[bdV[rp3SIL=UnXA=vjDETAP?j=V7PQf6DX3li\\0fG>pX8?rUb@LdAULp1I@[=ZLQ@;wt6QbYXaOBtS_LS6J<1u=T`gQi",
+		"query":"select * from plan_load_exchange_rates",
+		"userName":"admin",
+		"usesUnicode":false
+	},
+	"Parameters":
+	[
+		{
+			"Name":"PStartDate",
+			"Prompt":"Start Period?",
+			"Value":"Jan-2003",
+			"Type":"String"
+		},
+		{
+			"Name":"PEndDate",
+			"Prompt":"End Period?",
+			"Value":"Dec-2004",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"V1",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"V2",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"V3",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"V4",
+			"Type":"Numeric",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

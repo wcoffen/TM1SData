@@ -1,0 +1,19 @@
+{
+	"@type":"Process",
+	"Name":"test christians code",
+	"Code@Code.link":"test christians code.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"vCCw",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

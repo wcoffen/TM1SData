@@ -1,0 +1,45 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+vCC  = 'tetstest';
+
+IF(LONG(vCC)=6);
+cCostCenters = SUBST(vCC,3,4);
+
+ELSE;
+
+cCostCenters = vCC;
+
+
+ENDIF;
+
+
+
+
+
+
+
+#IF(LONG(vCC) = 6 ) ;
+
+ 
+
+    
+IF ( LONG ( vCC ) = 6 );
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

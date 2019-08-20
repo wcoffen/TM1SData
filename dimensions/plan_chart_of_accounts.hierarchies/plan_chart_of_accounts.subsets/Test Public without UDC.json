@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Test Public without UDC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('plan_chart_of_accounts')/Hierarchies('plan_chart_of_accounts')/Elements('Revenue')"
+		}
+	]
+}

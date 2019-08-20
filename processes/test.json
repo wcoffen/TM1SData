@@ -1,0 +1,36 @@
+{
+	"@type":"Process",
+	"Name":"test",
+	"Code@Code.link":"test.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"asciiDecimalSeparator":".",
+		"asciiDelimiterChar":":",
+		"asciiDelimiterType":"Character",
+		"asciiHeaderRecords":0,
+		"asciiQuoteCharacter":"\"",
+		"asciiThousandSeparator":",",
+		"dataSourceNameForClient":"model_upload\\tm1server.log",
+		"dataSourceNameForServer":"model_upload\\tm1server.log"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pFileName",
+			"Prompt":"File and Path on Server",
+			"Value":"C:\\IBM\\cognos\\tm1_64\\samples\\tm1\\PlanSamp\\tm1server.log",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"V1",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

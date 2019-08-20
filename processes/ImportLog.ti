@@ -1,0 +1,124 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+DATASOURCENAMEFORSERVER=pFileName;
+
+Dim1 = 'List01';
+Dim2 = 'List02';
+Dim3 = 'List03';
+Dim4 = 'MyStrings';
+Cube = 'MyStrings';
+MaxItems = 100;
+
+
+IF(DIMENSIONEXISTS(Dim1)=0);
+    DIMENSIONCREATE(Dim1);
+ELSE;
+	DimensionDeleteAllElements(Dim1);
+ENDIF;
+
+IF(DIMENSIONEXISTS(Dim2)=0);
+    DIMENSIONCREATE(Dim2);
+ELSE;
+	DimensionDeleteAllElements(Dim2);
+ENDIF;
+
+IF(DIMENSIONEXISTS(Dim3)=0);
+    DIMENSIONCREATE(Dim3);
+ELSE;
+	DimensionDeleteAllElements(Dim3);
+ENDIF;
+
+IF(DIMENSIONEXISTS(Dim4)=0);
+    DIMENSIONCREATE(Dim4);
+ELSE;
+	DimensionDeleteAllElements(Dim4);
+ENDIF;
+
+
+counter = 0;
+
+WHILE(Counter <= MaxItems);
+   Elem = NUMBERTOSTRING(counter);
+   DimensionElementInsertDirect(Dim1,'','A'|Elem,'N');
+   DimensionElementInsertDirect(Dim2,'','B'|Elem,'N');
+   DimensionElementInsertDirect(Dim3,'','C'|Elem,'N');
+      
+	counter = counter + 1;
+END;
+
+DimensionElementInsertDirect(Dim4,'','Files','S');
+DimensionElementInsertDirect(Dim4,'','Log Entries','S');
+DimensionElementInsertDirect(Dim4,'','Index','N');
+
+
+IF(CUBEEXISTS(Cube)=0);
+     CUBECREATE(Cube, Dim1, Dim2, Dim3, Dim4);
+ENDIF;
+
+
+IF(ViewExists( Cube, 'Data')=1);
+    ViewDESTROY( Cube, 'Data');
+ENDIF;
+
+ViewCreate(Cube, 'Data', 0 );
+ViewRowDimensionSet( Cube, 'Data', Dim1, 1 );
+ViewRowDimensionSet( Cube, 'Data', Dim2, 2 );
+ViewRowDimensionSet( Cube, 'Data', Dim3, 3 );
+ViewExtractSkipZeroesSet( Cube, 'Data',1 );
+ViewRowSuppressZeroesSet( Cube, 'Data', 1);
+
+IF(ViewExists( Cube, 'AllData')=1);
+    ViewDESTROY( Cube, 'AllData');
+ENDIF;
+
+ViewCreate(Cube, 'AllData', 0 );
+
+ViewZeroOut(Cube, 'AllData');
+
+#Set Load Paramaters
+
+
+
+DatasourceType = 'CHARACTERDELIMITED';
+
+sGoofCharacter = CHAR(191);
+DatasourceASCIIDelimiter = sGoofCharacter;
+DatasourceASCIIHeaderRecords = 0;
+DatasourceASCIIQuoteCharacter = '"';
+
+counter1 = 1;
+counter2 = 1;
+counter3 = 1;
+#endregion
+#region Data
+IF(	counter1 = 1 & counter2 = 1 & counter3 =1);
+     CELLPUTS(pFileName, Cube, 'A0','B0','C0','Log Entries');
+ENDIF;
+
+IF(	counter3 >= MaxItems);
+        counter3 = 1;
+        IF(	counter2 >= MaxItems);
+ 		   	counter1 = counter1 + 1;
+        	counter2 = 1;
+		ELSE;
+    		counter2 = counter2 + 1;
+		ENDIF;
+ELSE;
+    	counter3 = counter3 + 1;
+ENDIF;
+
+
+
+elem1 = 'A'|NUMBERTOSTRING(counter1) ;     
+elem2 = 'B'|NUMBERTOSTRING(counter2) ;
+elem3 = 'C'|NUMBERTOSTRING(counter3) ;
+
+Index = (counter1-1)*MaxItems*MaxItems+(counter2-1)*MaxItems+counter3;
+CELLPUTS(V1, Cube, Elem1, Elem2, Elem3, 'Log Entries');
+CELLPUTN(Index, Cube, Elem1, Elem2, Elem3, 'Index');
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

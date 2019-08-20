@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"WEC",
+	"Expression":"{UNION({[Plan_Chart_of_accounts].[Net Operating Income].children},{[Plan_Chart_of_accounts].[Cos].parent})}"
+}

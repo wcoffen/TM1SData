@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"MyStrings",
+	"Elements":
+	[
+		{
+			"Name":"Files",
+			"Type":"String"
+		},
+		{
+			"Name":"Log Entries",
+			"Type":"String"
+		},
+		{
+			"Name":"Index",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

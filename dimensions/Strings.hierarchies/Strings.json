@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Strings",
+	"Elements":
+	[
+		{
+			"Name":"Files",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Log",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}
